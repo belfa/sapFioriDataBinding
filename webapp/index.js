@@ -1,9 +1,8 @@
 sap.ui.require([
 	"sap/ui/model/json/JSONModel",
     "sap/ui/core/mvc/XMLView",
-    "sap/ui/model/BindingMode",
     "sap/ui/model/resource/ResourceModel"
-], function (JSONModel, XMLView, BindingMode, ResourceModel) {
+], function (JSONModel, XMLView, ResourceModel) {
 	"use strict";
 
 	// Attach an anonymous function to the SAPUI5 'init' event
@@ -18,19 +17,13 @@ sap.ui.require([
                 city: "Walldorf",
                 zip: "69190",
                 country: "Germany"
-            }
+			},
+			"salesToDate" : 12345.6789,
+			"currencyCode" : "EUR"
         });
-        
-        var oModelAuthor = new JSONModel({
-			firstName: "Miguel",
-			lastName: "Patiño"
-        });
-        
-        oModelAuthor.setDefaultBindingMode(BindingMode.OneWay);
 
 		// Assign the model object to the SAPUI5 core
 		sap.ui.getCore().setModel(oModel);
-        sap.ui.getCore().setModel(oModelAuthor,'author');
 
 		// Create a resource bundle for language specific texts
 		var oResourceModel = new ResourceModel({
