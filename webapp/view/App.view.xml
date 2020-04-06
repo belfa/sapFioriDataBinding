@@ -1,7 +1,7 @@
 <mvc:View
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Panel headerText="{i18n>panelHeaderText}" class="sapUiResponsiveMargin" width="auto">
+	<Panel headerText="{i18n>panelHeaderText}" class="sapUiResponsiveMargin" width="auto" >
 		<content>
 			<Label text="{i18n>firstName}" class="sapUiSmallMargin"/>
 			<Input value="{/firstName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
@@ -10,4 +10,9 @@
 			<CheckBox selected="{/enabled}" text="{i18n>enabled}"/>
 		</content>
 	</Panel>
+    <Panel headerText="Test with other model" class="sapUiResponsiveMargin" width="auto">
+        <content>
+            <Label text="{/author/firstName}" class="sapUiSmallMargin"/>
+        </content>
+    </Panel>
 </mvc:View>
