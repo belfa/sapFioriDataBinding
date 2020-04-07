@@ -10,6 +10,7 @@ sap.ui.require([
 		var oProductModel = new JSONModel();
 		oProductModel.loadData("./model/Products.json");
 		sap.ui.getCore().setModel(oProductModel, "products");
+		
 		// Create a JSON model from an object literal
 		var oModel = new JSONModel({
 			firstName: "Harry",
