@@ -10,7 +10,7 @@ sap.ui.require([
 		var oProductModel = new JSONModel();
 		oProductModel.loadData("./model/Products.json");
 		sap.ui.getCore().setModel(oProductModel, "products");
-		
+
 		// Create a JSON model from an object literal
 		var oModel = new JSONModel({
 			firstName: "Harry",
@@ -23,7 +23,8 @@ sap.ui.require([
                 country: "Germany"
 			},
 			"salesToDate" : 12345.6789,
-			"currencyCode" : "EUR"
+			"currencyCode" : "EUR",
+			"priceThreshold" : 20
         });
 
 		// Assign the model object to the SAPUI5 core
